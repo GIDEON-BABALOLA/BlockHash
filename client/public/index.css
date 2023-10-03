@@ -1,0 +1,60 @@
+/* Center the container horizontally and vertically */
+body{
+    font-family: clash display;
+}
+.flex {
+    display: flex;
+}
+.botman{
+    /* text-align: center;
+    align-items: center; */
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+/* Add margin to the top of the container */
+
+.formal {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+.title{
+text-align: center;
+font-size: 1.5rem;
+padding: 2%
+
+}
+.man{
+padding: 0%;
+}
+
+/* Additional styling for your form elements can be added here */
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+    /* Adjust form width and margin for smaller screens */
+    .formal {
+        width: 90%;
+        margin-top: 10px; /* Adjust margin for smaller screens */
+    }
+
+    /* Adjust input fields to make them full width */
+    .formal input[type="text"],
+    .formal input[type="password"],
+    .formal select {
+        width: 100%;
+    }
+    .marker{
+        margin: 20% 10%;
+    }
+  .back{
+  
+  font-size: 0.6rem;
+  margin-top: 2%;
+  }
+}
