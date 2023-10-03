@@ -2,8 +2,6 @@ const express = require("express")
 const crypto = require('crypto');
 const cors = require('cors'); // Import the cors package
 const app = express()
-const router = express.Router()
-app.use(express.static("../client/build"));
 app.use(cors());
 app.use(express.urlencoded({extended : false}));
 app.use(express.json());

@@ -13,7 +13,7 @@ function App() {
   const [blockHash, setBlockHash] = useState('');
 
  const fetchData = () =>{
-  axios.post("/api/data", formData)
+  axios.post("https://block-hash.onrender.com/api/data", formData)
   .then((response)=>{
     setBlockHash(response.data.blockHash)
   })
