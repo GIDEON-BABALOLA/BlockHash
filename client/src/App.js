@@ -1,7 +1,8 @@
 import React, {useState} from "react"
 import axios from "axios"
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 function App() {
+  const [bot, setBot] = useState(false)
   const [formData, setFormData] = useState({
     version: '',
     hashPrevBlock: '',
@@ -16,14 +17,16 @@ function App() {
   axios.post("https://block-hash.onrender.com/api/data", formData)
   .then((response)=>{
     setBlockHash(response.data.blockHash)
+    setBot(false)
   })
   .catch((error)=>{
     console.error("Error : " +error)
   })
  } 
   const handleSubmit = (e) => {
+    fetchData();
+    setBot(true)
     e.preventDefault();
- fetchData();
   };
   function mark(event){
     setFormData((prevValue)=>{
@@ -96,9 +99,9 @@ function App() {
           2,876,584,592"  value={formData.Nonce}/>
         </div>
       </div>
-      <Button variant="contained"  onClick={handleSubmit}>
+      <button className={ bot ? "disable" : "submit-btn"} onClick={handleSubmit}>
   Submit
-</Button>
+</button>
 <p className="back">
  {blockHash} 
 
